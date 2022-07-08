@@ -79,6 +79,6 @@ io.on("connection", async (socket) => {
   console.log("===============");
 });
 
-server.listen(3000, "192.168.254.101", () => {
+server.listen(3000, "192.168.254.105", () => {
   console.log("listening on *:3000");
 });
