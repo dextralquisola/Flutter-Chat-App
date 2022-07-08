@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_socket_io/service/friends_service.dart';
-import 'package:flutter_socket_io/widgets/custom_button.dart';
 
 import '../model/friend.dart';
+import '../service/friends_service.dart';
 
 class FriendRequestCard extends StatelessWidget {
   final friendService = FriendService();
