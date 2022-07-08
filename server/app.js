@@ -16,8 +16,7 @@ const indexRouter = require("./routes/index");
 const User = require("./models/user");
 const Chat = require("./models/chats");
 
-const DB =
-  "mongodb+srv://dexterjay26:PervySage123@cluster0.dlfud.mongodb.net/?retryWrites=true&w=majority";
+const DB = "";
 
 mongoose
   .connect(DB)
