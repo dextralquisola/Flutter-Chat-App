@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require("express");
 const bcryptjs = require("bcryptjs");
 const jwt = require("jsonwebtoken");
@@ -62,7 +64,7 @@ authRouter.post("/api/signin", async (req, res) => {
 
     console.log(populatedUser);
 
-    const token = jwt.sign({ id: user._id }, "passwordKey");
+    const token = jwt.sign({ id: user._id }, process.env.PRIVATE_KEY);
     console.log({ token, ...populatedUser._doc });
     res.json({ token, ...populatedUser._doc });
   } catch (e) {
@@ -75,7 +77,7 @@ authRouter.post("/tokenIsValid", async (req, res) => {
     const token = req.header("x-auth-token");
     if (!token) return res.json(false);
 
-    const verified = jwt.verify(token, "passwordKey");
+    const verified = jwt.verify(token, process.env.PRIVATE_KEY);
     if (!verified) return res.json(false);
 
     const user = await User.findById(verified.id);
