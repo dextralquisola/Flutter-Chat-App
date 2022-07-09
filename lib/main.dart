@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Chat App',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.purple,
         fontFamily: 'Inter',
         scaffoldBackgroundColor: Colors.white,
       ),
