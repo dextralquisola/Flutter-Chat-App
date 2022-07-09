@@ -16,6 +16,9 @@ const indexRouter = require("./routes/index");
 const User = require("./models/user");
 const Chat = require("./models/chats");
 
+/*
+  You need to create a free cluster and create a environment variables to add your mongodb link
+*/
 const DB = process.env.MONGO_DB;
 
 mongoose
