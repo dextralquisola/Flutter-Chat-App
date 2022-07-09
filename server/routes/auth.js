@@ -5,7 +5,6 @@ const bcryptjs = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
 const auth = require("../middleware/auth");
-
 const User = require("../models/user");
 
 const authRouter = express.Router();
@@ -65,7 +64,6 @@ authRouter.post("/api/signin", async (req, res) => {
     console.log(populatedUser);
 
     const token = jwt.sign({ id: user._id }, process.env.PRIVATE_KEY);
-    console.log({ token, ...populatedUser._doc });
     res.json({ token, ...populatedUser._doc });
   } catch (e) {
     res.status(500).json({ error: e.message });

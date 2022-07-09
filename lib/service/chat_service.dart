@@ -1,13 +1,12 @@
 import 'dart:convert';
 
 import 'package:flutter/cupertino.dart';
-
-import 'package:http/http.dart' as http;
 import 'package:provider/provider.dart';
+import 'package:http/http.dart' as http;
 
-import '../constants/global_variables.dart';
 import '../providers/chat.dart';
 import '../utils/http_error_handler.dart';
+import '../constants/global_variables.dart';
 
 class ChatService {
   fetchChats(BuildContext context, String token, String chatId) async {

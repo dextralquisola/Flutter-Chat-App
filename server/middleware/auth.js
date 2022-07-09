@@ -9,7 +9,7 @@ const auth = async (req, res, next) => {
         msg: "No auth token, access denied",
       });
 
-    const verified = jwt.verify(token, "passwordKey");
+    const verified = jwt.verify(token, process.env.PRIVATE_KEY);
     if (!verified)
       return res.status(401).json({
         msg: "Token verification failed, authorization denied",
