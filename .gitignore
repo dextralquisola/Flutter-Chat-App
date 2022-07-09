@@ -49,3 +49,7 @@ app.*.map.json
 # server node modules
 
 ./server/node_modules/
+
+# env variables
+
+*.env

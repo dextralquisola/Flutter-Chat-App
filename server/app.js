@@ -1,22 +1,22 @@
+require("dotenv").config();
+
 const express = require("express");
 const app = express();
 const http = require("http");
 const server = http.createServer(app);
 const { Server } = require("socket.io");
 const io = new Server(server);
-const messages = [];
 
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
-const methodOverride = require("method-override");
 
 const authRouter = require("./routes/auth");
 const indexRouter = require("./routes/index");
 const User = require("./models/user");
 const Chat = require("./models/chats");
 
-const DB = "";
+const DB = process.env.MONGO_DB;
 
 mongoose
   .connect(DB)
