@@ -9,7 +9,7 @@ A flutter app that utilized socket io for realtime chat.
   * now go to the server folder then run `npm install`
 * Create an environment variable for Mongo db database and private key for Jwt token
   * name it MONGO_DB and PRIVATE_KEY it still depends on you
-* Also change the ip address on the server to your ip address, in flutter change the global variables, in the server change the ip where it listens to.
+* Also change the ip address on the server to your ip address, in flutter change the global variables, in the server change the ip where it listens to. This is applicable if you only run in locally, remove the ip address if hosting online.
 
 ### Running the application locally
 * after installing all the libraries/packages
@@ -19,7 +19,7 @@ A flutter app that utilized socket io for realtime chat.
 
 * Can login and signup using email
 * Can add friends using email
-* Can chat friends with realtime chat
+* Can chat friends with realtime data going to both users
 
 ## Future Updates
 
