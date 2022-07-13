@@ -79,6 +79,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   hintText: '*******',
                   labelText: 'Password',
                   controller: passwordController,
+                  isPassword: true,
                 ),
                 const SizedBox(height: 10),
                 CustomButton(
