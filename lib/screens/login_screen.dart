@@ -75,6 +75,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   hintText: '*******',
                   labelText: 'Password',
                   controller: passwordController,
+                  isPassword: true,
                 ),
                 const SizedBox(height: 10),
                 Row(
