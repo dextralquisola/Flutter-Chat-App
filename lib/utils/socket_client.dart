@@ -1,16 +1,16 @@
-import 'package:socket_io_client/socket_io_client.dart' as IO;
+import 'package:socket_io_client/socket_io_client.dart' as io;
 
 import '../constants/global_variables.dart';
 
 class SocketClient {
-  IO.Socket? socket;
+  io.Socket? socket;
   late String email;
   static SocketClient? _instance;
 
   SocketClient._internal(String email) {
-    socket = IO.io(
+    socket = io.io(
       baseServerAdress,
-      IO.OptionBuilder()
+      io.OptionBuilder()
           .setTransports(['websocket']).setQuery({'email': email}).build(),
     );
     //socket!.connect();
