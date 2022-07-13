@@ -36,6 +36,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
       password: passwordController.text,
       context: context,
     );
+
+    Navigator.of(context).pushReplacement(
+      MaterialPageRoute(
+        builder: (context) => const LoginScreen(),
+      ),
+    );
   }
 
   @override
