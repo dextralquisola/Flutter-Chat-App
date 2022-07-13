@@ -100,13 +100,10 @@ class AuthService {
       var prefs = await SharedPreferences.getInstance();
       String? token = prefs.getString('x-auth-token');
 
-      if (token == null) {
-        await prefs.setString('x-auth-token', '');
+      if (token == null || token == '') {
+        prefs.setString('x-auth-token', '');
         return 'No Token Provided';
       }
-
-      print("token:");
-      print(token);
 
       var tokenRes = await http.post(
         Uri.parse('$baseServerAdress/tokenIsValid'),

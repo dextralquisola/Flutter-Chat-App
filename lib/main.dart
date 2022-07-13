@@ -46,10 +46,13 @@ class MyApp extends StatelessWidget {
               ),
             );
           }
-
+          // this block of code must be fixed its not a good code :<
           if (snap.connectionState == ConnectionState.done) {
             if (snap.hasData && snap.data! == 'Valid Token') {
               return const HomeScreen();
+            }
+            if (snap.hasData && snap.data! == 'No Token Provided') {
+              return const LoginScreen();
             }
           }
 
