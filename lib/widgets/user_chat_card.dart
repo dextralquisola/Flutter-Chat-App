@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../model/friend.dart';
 import '../model/user.dart';
-import '../screens/chat_screen.dart';
+import '../screens/chat screens/chat_screen.dart';
 import '../service/chat_service.dart';
 
 class UserChatCard extends StatelessWidget {

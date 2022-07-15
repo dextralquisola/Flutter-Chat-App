@@ -6,7 +6,7 @@ import '../providers/user.dart';
 import '../utils/socket_client.dart';
 import '../utils/socket_functions.dart';
 import './friend_request_screen.dart';
-import './main_chat_screen.dart';
+import 'chat screens/main_chat_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);

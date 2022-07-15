@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 
-import '../model/friend.dart';
-import '../providers/chat.dart';
-import '../providers/user.dart';
-import '../utils/socket_client.dart';
+import '../../model/friend.dart';
+import '../../providers/chat.dart';
+import '../../providers/user.dart';
+import '../../utils/socket_client.dart';
 
 class ChatScreen extends StatefulWidget {
   final Friend friend;

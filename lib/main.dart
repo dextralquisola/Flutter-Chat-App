@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 import './providers/chat.dart';
 import './providers/user.dart';
 import './screens/home_screen.dart';
-import './screens/login_screen.dart';
+import 'screens/auth screens/login_screen.dart';
 import './service/auth_service.dart';
 
 void main() {

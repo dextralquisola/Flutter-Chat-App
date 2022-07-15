@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../model/friend.dart';
-import '../providers/user.dart';
-import '../widgets/custom_texfield.dart';
-import '../widgets/custom_text.dart';
-import '../widgets/user_chat_card.dart';
+import '../../model/friend.dart';
+import '../../providers/user.dart';
+import '../../widgets/custom_texfield.dart';
+import '../../widgets/custom_text.dart';
+import '../../widgets/user_chat_card.dart';
 
 class MainChatScreen extends StatefulWidget {
   const MainChatScreen({Key? key}) : super(key: key);
