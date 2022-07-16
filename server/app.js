@@ -43,8 +43,10 @@ io.on("connection", async (socket) => {
 
   socket.on("join-chat", (data) => {
     socket.join(data);
+    /*
     console.log("Joined to");
     console.log(data);
+    */
   });
 
   socket.on("message", async (data) => {
@@ -60,7 +62,7 @@ io.on("connection", async (socket) => {
     await chat.save();
     io.to(chat._id.toString()).emit("message", message);
 
-    console.log(message);
+    //console.log(message);
   });
 
   socket.on("unsubscribe", (chatId) => {
@@ -72,6 +74,7 @@ io.on("connection", async (socket) => {
     }
   });
 
+  /*
   const sockets = await io.fetchSockets();
 
   console.log("Connected Users: " + sockets.length);
@@ -79,6 +82,7 @@ io.on("connection", async (socket) => {
     console.log(`ID: ${s.id} email: ${s.handshake.query.email},`);
   }
   console.log("===============");
+  */
 });
 
 server.listen(3000, "192.168.254.105", () => {

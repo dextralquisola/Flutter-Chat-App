@@ -4,7 +4,6 @@ const User = require("../models/user");
 const auth = require("../middleware/auth");
 
 const Chat = require("../models/chats");
-const { json } = require("body-parser");
 
 const indexRouter = express.Router();
 
@@ -81,7 +80,8 @@ indexRouter.post("/api/accept-friend", auth, async (req, res) => {
       ) {
         socketId.push(s.id);
 
-        var data = userRec.email === s.handshake.query.email ? userRec : userSen;
+        var data =
+          userRec.email === s.handshake.query.email ? userRec : userSen;
 
         data.populate("friends.friend", "_id name email").then((result) => {
           io.to(s.id).emit("friend-request", result);
@@ -105,7 +105,5 @@ indexRouter.post("/api/fetch-chats", auth, async (req, res) => {
   const chats = await Chat.findById(req.body.chatId);
   res.json(chats);
 });
-
-
 
 module.exports = indexRouter;
