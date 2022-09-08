@@ -69,6 +69,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   hintText: '',
                   labelText: 'Email',
                   controller: emailController,
+                  textInputType: TextInputType.emailAddress,
                 ),
                 const SizedBox(height: 10),
                 CustomTextField(

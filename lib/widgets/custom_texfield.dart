@@ -8,6 +8,7 @@ class CustomTextField extends StatefulWidget {
   final double elevation;
   final String? labelText;
   final IconData? prefixIcon;
+  final TextInputType? textInputType;
   final bool isPassword;
   const CustomTextField({
     Key? key,
@@ -16,6 +17,7 @@ class CustomTextField extends StatefulWidget {
     this.elevation = 1,
     this.labelText,
     this.prefixIcon,
+    this.textInputType,
     this.isPassword = false,
   }) : super(key: key);
 
@@ -51,7 +53,8 @@ class _CustomTextFieldState extends State<CustomTextField> {
             color: Colors.white,
             child: TextField(
               controller: widget.controller,
-              obscureText: isObscure,
+              obscureText: widget.isPassword,
+              keyboardType: widget.textInputType,
               decoration: InputDecoration(
                 fillColor: Colors.white,
                 filled: true,

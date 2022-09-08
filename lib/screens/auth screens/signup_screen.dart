@@ -73,6 +73,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   hintText: '',
                   labelText: 'Email Address',
                   controller: emailController,
+                  textInputType: TextInputType.emailAddress,
                 ),
                 const SizedBox(height: 10),
                 CustomTextField(
